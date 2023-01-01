@@ -312,6 +312,7 @@ function get_provider_option($provider, $option)
         case 'mailchimp':
         case 'mailpoet':
         case 'icontact':
+        case 'keap':
         case 'getresponse':
         case 'campaignmonitor':
         case 'campaignrefinery':
@@ -378,6 +379,7 @@ $current_prefix = '';
 $current_integration_id = '';
 function op3_generate_optin_form($prefix = '', $position = '')
 {
+
     global $op_options;
     global $current_prefix;
     global $current_integration_id;
@@ -480,7 +482,11 @@ function op3_generate_optin_form($prefix = '', $position = '')
                 $is_integration_set = false;
             }
             break;
-
+        case 'keap':
+            if (empty($integration_type)) {
+                $is_integration_set = false;
+            }
+            break;
         default:
             $list = gio('list');
             if (empty($integration_type) || empty($list)) {
@@ -575,9 +581,10 @@ function op3_generate_optin_form($prefix = '', $position = '')
                 $gdpr_location = "off";
                 break;
         }
+        global $post;
         $hidden = array();
+        $hidden['optin-current-page-id'] = $post->ID;
         $hidden['optinIntegration'] = $integration_type;
-        $hidden['adminEmail'] = op3_admin_email();
         $hidden['optinList'] = gio('list');
         $hidden['optinWebhookUrl'] = gio('webhook');
         $hidden['optinTag'] = gio('tag');

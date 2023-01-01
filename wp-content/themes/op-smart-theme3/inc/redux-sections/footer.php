@@ -72,7 +72,7 @@ Redux::setSection($opt_name, array(
                 'teeny'         => true,
                 'media_buttons' => false,
             ),
-            'default'   => '&copy;2010-2017 SmartTheme. All Rights Reserved.'
+            'default'   => '&copy; '.date('Y').'. All Rights Reserved.'
         ),
         array(
             'id'            => 'footer_background_color',

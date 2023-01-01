@@ -42,7 +42,7 @@ if ( ! class_exists( 'ReduxFramework_image_select' ) ) {
          * @access      public
          * @return      void
          */
-        function __construct( $field = array(), $value = '', $parent ) {
+        function __construct( $field, $value, $parent ) {
             $this->parent = $parent;
             $this->field  = $field;
             $this->value  = $value;
@@ -80,8 +80,8 @@ if ( ! class_exists( 'ReduxFramework_image_select' ) ) {
 
                     if ( ! isset( $v['class'] ) ) {
                         $v['class'] = '';
-                    }                    
-                    
+                    }
+
                     $style = '';
 
                     if ( ! empty( $this->field['width'] ) ) {
@@ -107,9 +107,9 @@ if ( ! class_exists( 'ReduxFramework_image_select' ) ) {
                     }
 
                     $theValue = $k;
-                    
+
                     $selected = ( checked( $this->value, $theValue, false ) != '' ) ? ' redux-image-select-selected' : '';
-                    
+
                     if ( ! empty( $this->field['tiles'] ) && $this->field['tiles'] == true ) {
                         $theValue = $v['img'];
                     }

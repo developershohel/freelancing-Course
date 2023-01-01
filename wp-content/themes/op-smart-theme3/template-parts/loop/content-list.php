@@ -33,7 +33,7 @@
                         op_list_layout_meta();
                     echo '</div>';
 
-                    echo '<h1 class="op-list-headline" itemprop="headline"><a href="'. get_the_permalink() . '">' . get_the_title() .'</a></h1>';
+                    echo '<h2 class="op-archive-title"><a href="'. get_the_permalink() . '">' . get_the_title() .'</a></h2>';
 
                     echo '<div class="op-homepage-list-text">';
                         op_short_excerpt();

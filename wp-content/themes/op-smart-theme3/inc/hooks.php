@@ -104,7 +104,7 @@ function op_load_css_per_page()
             $letter_spacing = ' letter-spacing: -1px;';
         }
 
-        $styles['.op-homepage-hero-title, .op-headline, .widget-title, .op-list-headline, .post-box-title, .op-entry h1, .op-entry h2, .op-entry h3, .op-entry h4, .op-entry h5, .op-entry h6, .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6'] = 'text-transform: uppercase;' . $letter_spacing;
+        $styles['.op-homepage-hero-title, .op-headline, .widget-title, .op-list-headline, .op-archive-title,  .post-box-title, .op-entry h1, .op-entry h2, .op-entry h3, .op-entry h4, .op-entry h5, .op-entry h6, .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6'] = 'text-transform: uppercase;' . $letter_spacing;
     }
 
 

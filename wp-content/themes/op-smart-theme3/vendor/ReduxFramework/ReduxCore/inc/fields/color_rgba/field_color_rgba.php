@@ -45,7 +45,7 @@
              *
              * @return      void
              */
-            public function __construct( $field = array(), $value = '', $parent ) {
+            public function __construct( $field, $value, $parent ) {
 
                 // Set required variables
                 $this->parent = $parent;
@@ -99,8 +99,8 @@
                 $field_id = $this->field['id'];
 
                 // Color picker container
-                echo '<div 
-                      class="redux-color-rgba-container ' . $this->field['class'] . '" 
+                echo '<div
+                      class="redux-color-rgba-container ' . $this->field['class'] . '"
                       data-id="' . $field_id . '"
                       data-show-input="' . $this->field['options']['show_input'] . '"
                       data-show-initial="' . $this->field['options']['show_initial'] . '"

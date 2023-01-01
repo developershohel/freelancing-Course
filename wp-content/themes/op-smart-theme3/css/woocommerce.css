@@ -165,7 +165,7 @@
 
 .woocommerce .site-content-woo .product .cart {
     margin-bottom: 1.3em;
-    display: flex;
+    display: block;
     align-items: stretch;
 }
 

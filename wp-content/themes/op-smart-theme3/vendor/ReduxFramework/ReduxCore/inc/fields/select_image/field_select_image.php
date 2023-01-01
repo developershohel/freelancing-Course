@@ -23,7 +23,7 @@ if ( ! class_exists( 'ReduxFramework_select_image' ) ) {
          *
          * @since ReduxFramework 1.0.0
          */
-        function __construct( $field = array(), $value = '', $parent ) {
+        function __construct( $field, $value, $parent ) {
             $this->parent = $parent;
             $this->field  = $field;
             $this->value  = $value;
@@ -58,7 +58,7 @@ if ( ! class_exists( 'ReduxFramework_select_image' ) ) {
                     $select2_params = htmlspecialchars( $select2_params, ENT_QUOTES );
 
                     echo '<input type="hidden" class="select2_params" value="' . $select2_params . '">';
-                }                    
+                }
 
                 // Begin the <select> tag
                 echo '<select data-id="' . $this->field['id'] . '" data-placeholder="' . $placeholder . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '" class="redux-select-item redux-select-images ' . $this->field['class'] . '"' . $width . ' rows="6">';
@@ -82,7 +82,7 @@ if ( ! class_exists( 'ReduxFramework_select_image' ) ) {
                     if ( ! isset( $v['alt'] ) ) {
                         $v['alt'] = $v['title'];
                     }
-                    
+
                     // Set the selected entry
                     $selected = selected( $this->value, $v['img'], false );
 

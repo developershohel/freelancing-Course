@@ -180,7 +180,6 @@ gulp.task('css', ['cssconcat', 'cssconcatmin']);
  */
 gulp.task('jsconcat', ['jsmin'], function() {
     return gulp.src([
-            './js/bootstrap.js',
             './js/ie10-viewport-bug-workaround.js',
             './js/jquery.fitvids.js',
             //'./js/swipebox/js/jquery.swipebox.js',
@@ -200,7 +199,6 @@ gulp.task('jsconcat', ['jsmin'], function() {
  */
 gulp.task('jsconcatmin', ['jsmin'], function() {
     return gulp.src([
-            './js/bootstrap.min.js',
             './js/ie10-viewport-bug-workaround.min.js',
             './js/jquery.fitvids.min.js',
             //'./js/swipebox/js/jquery.swipebox.min.js',

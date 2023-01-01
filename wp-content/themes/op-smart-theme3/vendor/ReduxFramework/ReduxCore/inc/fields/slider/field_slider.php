@@ -37,7 +37,7 @@ if ( ! class_exists( 'ReduxFramework_slider' ) ) {
         private $display_text = 2;
         private $display_select = 3;
 
-        function __construct( $field = array(), $value = '', $parent ) {
+        function __construct( $field, $value, $parent ) {
 
             //parent::__construct( $parent->sections, $parent->args );
             $this->parent = $parent;
@@ -346,7 +346,7 @@ if ( ! class_exists( 'ReduxFramework_slider' ) ) {
             }
 
             // DIV output
-            echo 
+            echo
             '<div
                 class="redux-slider-container ' . $this->field['class'] . '"
                 id="' . $fieldID . '"

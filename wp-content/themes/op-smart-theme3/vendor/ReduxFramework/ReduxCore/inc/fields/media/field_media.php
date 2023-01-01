@@ -43,7 +43,7 @@ if ( ! class_exists( 'ReduxFramework_media' ) ) {
          * @access      public
          * @return      void
          */
-        function __construct( $field = array(), $value = '', $parent ) {
+        function __construct( $field, $value = '', $parent ) {
             $this->parent = $parent;
             $this->field  = $field;
             $this->value  = $value;
@@ -229,7 +229,7 @@ if ( ! class_exists( 'ReduxFramework_media' ) ) {
             } else {
                 wp_enqueue_script( 'media-upload' );
             }
-            
+
             wp_enqueue_script(
                 'redux-field-media-js',
                 ReduxFramework::$_url . 'assets/js/media/media' . Redux_Functions::isMin() . '.js',

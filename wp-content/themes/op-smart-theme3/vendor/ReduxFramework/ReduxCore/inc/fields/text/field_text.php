@@ -14,7 +14,7 @@ if ( ! class_exists( 'ReduxFramework_text' ) ) {
          *
          * @since ReduxFramework 1.0.0
          */
-        function __construct( $field = array(), $value = '', $parent ) {
+        function __construct( $field, $value, $parent ) {
             $this->parent = $parent;
             $this->field  = $field;
             $this->value  = $value;
@@ -46,14 +46,14 @@ if ( ! class_exists( 'ReduxFramework_text' ) ) {
             //}
 
             $readonly       = ( isset( $this->field['readonly'] ) && $this->field['readonly']) ? ' readonly="readonly"' : '';
-            $autocomplete   = ( isset($this->field['autocomplete']) && $this->field['autocomplete'] == false) ? ' autocomplete="off"' : ''; 
+            $autocomplete   = ( isset($this->field['autocomplete']) && $this->field['autocomplete'] == false) ? ' autocomplete="off"' : '';
 
             if ( isset( $this->field['options'] ) && ! empty( $this->field['options'] ) ) {
 
                 $placeholder = '';
                 if ( isset( $this->field['placeholder'] ) ) {
                     $placeholder = $this->field['placeholder'];
-                }                    
+                }
 
                 foreach ( $this->field['options'] as $k => $v ) {
                     if ( ! empty( $placeholder ) ) {

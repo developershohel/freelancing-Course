@@ -34,7 +34,7 @@
              *
              * @return      void
              */
-            public function __construct( $field = array(), $value = '', $parent ) {
+            public function __construct( $field, $value, $parent ) {
 
                 // Set required variables
                 $this->parent = $parent;
@@ -98,11 +98,11 @@
                 if (isset($this->field['open']) && $this->field['open'] == true) {
                     $is_open = true;
                 }
-                
+
                 echo '<div ' . $dev_tag . ' data-state="' . $is_open . '" data-position="' . $field_pos . '" id="' . $this->field['id'] . '" class="redux-accordion-field redux-field ' . $this->field['style'] . $this->field['class'] . '">';
                 echo '<div class="control">';
                 echo '<div class="redux-accordion-info' . $add_class . '">';
-                
+
                 if ( ! empty( $this->field['title'] ) ) {
                     echo '<h3>' . $this->field['title'] . '</h3>';
                 }

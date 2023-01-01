@@ -39,8 +39,8 @@
              * @access      public
              * @return      void
              */
-            function __construct( $field = array(), $value = '', $parent ) {
-                
+            function __construct( $field, $value, $parent ) {
+
                 $this->parent   = $parent;
                 $this->field    = $field;
                 $this->value    = $value;
@@ -75,14 +75,14 @@
                 } else {
                     $json = json_encode( $this->parent->options );
                 }
-                
+
                 $defaults = array(
                     'full_width' => true,
                     'overflow'   => 'inherit',
                 );
 
                 $this->field = wp_parse_args( $this->field, $defaults );
-                
+
                 if ( $this->is_field ) {
                     $fullWidth = $this->field['full_width'];
                 }
@@ -90,7 +90,7 @@
                 $bDoClose = false;
 
                 $id = $this->parent->args['opt_name'] . '-' . $this->field['id'];
-                
+
                 if ( ! $this->is_field || ( $this->is_field && false == $fullWidth ) ) { ?>
                     <style>#<?php echo esc_html($id); ?> {padding: 0;}</style>
                     </td></tr></table>
@@ -99,7 +99,7 @@
 <?php
                     $bDoClose = true;
                 }
-?>                
+?>
                 <fieldset id="<?php echo esc_attr($id); ?>-fieldset" class="redux-field redux-container-<?php echo esc_attr($this->field['type']) . ' ' . esc_attr($this->field['class']); ?>" data-id="<?php echo esc_attr($this->field['id']); ?>">
                     <h3><?php esc_html_e( 'Options Object', 'redux-framework' ); ?></h3>
                     <div id="redux-object-browser"></div>
@@ -116,7 +116,7 @@
                             <th></th>
                             <td>
 <?php
-                }            
+                }
             }
 
             /**

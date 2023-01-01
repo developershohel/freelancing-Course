@@ -1,4 +1,4 @@
-# Copyright (C) 2021 OptimizePress SmartTheme
+# Copyright (C) 2022 OptimizePress SmartTheme
 # This file is distributed under the same license as the OptimizePress SmartTheme package.
 msgid ""
 msgstr ""

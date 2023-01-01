@@ -41,7 +41,7 @@
                         echo '</div>';
                     echo '</div>';
 
-                    echo '<h1 class="op-list-headline" itemprop="headline"><a href="'. get_the_permalink() . '">' . get_the_title() .'</a></h1>';
+                    echo '<h2 class="op-archive-title" itemprop="headline"><a href="'. get_the_permalink() . '">' . get_the_title() .'</a></h2>';
 
                 echo '</header>';
 

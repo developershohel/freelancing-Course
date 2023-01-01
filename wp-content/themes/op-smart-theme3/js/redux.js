@@ -81,7 +81,9 @@ jQuery(document).ready(function($) {
                 provider !== 'oneshoppingcart' &&
                 provider !== 'zapier' &&
                 provider !== 'webhook' &&
-                provider !== 'arpreach'
+                provider !== 'arpreach' &&
+                provider !== 'keap'
+
             ) {
 
                 if (typeof listRequest[provider] == 'undefined') {
@@ -580,6 +582,7 @@ jQuery(document).ready(function($) {
                         case 'convertkit':
                         case 'getresponse':
                         case 'icontact':
+                        case 'keap':
                             nameValue = 'name';
                             break;
                         case 'officeautopilot':

@@ -40,7 +40,7 @@
              * @access      public
              * @return      void
              */
-            function __construct( $field = array(), $value = '', $parent ) {
+            function __construct( $field, $value, $parent ) {
 
                 $this->parent = $parent;
                 $this->field  = $field;
@@ -355,15 +355,15 @@
                         wp_enqueue_script( 'media-upload' );
                     }
                 }
-                
+
                 if (!wp_style_is ( 'select2-css' )) {
                     wp_enqueue_style( 'select2-css' );
                 }
-                
+
                 if (!wp_style_is ( 'wp-color-picker' )) {
                     wp_enqueue_style( 'wp-color-picker' );
                 }
-                
+
                 if (!wp_script_is ( 'redux-field-background-js' )) {
                     wp_enqueue_script(
                         'redux-field-background-js',
@@ -384,7 +384,7 @@
                             'all'
                         );
                     }
-                    
+
                     if (!wp_style_is ( 'redux-color-picker-css' )) {
                         wp_enqueue_style( 'redux-color-picker-css' );
                     }

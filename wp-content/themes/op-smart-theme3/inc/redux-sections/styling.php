@@ -1,4 +1,5 @@
 <?php
+
 Redux::setSection($opt_name, array(
     'title'     => _x('Styling', 'op3_smart'),
     'id'        => 'styling',
@@ -380,6 +381,24 @@ Redux::setSection($opt_name, array(
             ),
         ),
         array(
+            'id'            => 'typography_basic_archive_title',
+            'title'         => _x('Blog Archive Title', 'Styling Typography', 'op3_smart'),
+            'type'          => 'typography',
+            'font-backup'   => false,
+            'font-style'    => false,
+            'font-weight'   => false,
+            'subsets'       => false,
+            'line-height'   => true,
+            'text-align'    => false,
+            'color'         => false,
+            'font-family'   => false,
+            'output'        => array('h2'),
+            'default'       => array(
+                'font-size'         => $op_options['typography_basic_h1_font_size']['font-size'] ?: '14px',
+                'line-height'       => $op_options['typography_basic_h1_font_size']['line-height'] ?: '24px',
+            ),
+        ),
+        array(
             'id'        => 'typography_headline_section_end',
             'type'      => 'section',
             'indent'    => false,
@@ -612,6 +631,25 @@ Redux::setSection($opt_name, array(
                 'letter-spacing'    => '0px',
             ),
         ),
+
+        array(
+            'id'                => 'typography_archive_title',
+            'title'             => _x('Blog Archive Title', 'Styling Typography', 'op3_smart'),
+            'type'              => 'typography',
+            'output'            => array('.op-archive-title'),
+            'font-backup'       => true,
+            'letter-spacing'    => true,
+            'default'           => array(
+                'font-family'       => $op_options['typography_h1']['font-family'] ?: 'Montserrat',
+                'font-backup'       => $op_options['typography_h1']['font-backup'] ?: 'Arial, Helvetica, sans-serif',
+                'font-size'         => $op_options['typography_h1']['font-size'] ?: '30px',
+                'font-weight'       => $op_options['typography_h1']['font-weight'] ?: '500',
+                'color'             => $op_options['typography_h1']['color'] ?: '#333333',
+                'line-height'       => $op_options['typography_h1']['line-height'] ?: '45px',
+                'letter-spacing'    => $op_options['typography_h1']['letter-spacing'] ?: '0px',
+            ),
+        ),
+
         array(
             'id'        => 'typography_heading_section_end',
             'type'      => 'section',

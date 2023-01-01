@@ -2,7 +2,7 @@
 
 Contributors: OptimizePress
 
-Current version: 1.0.14
+Current version: 1.0.20
 Requires at least: 4.0
 Tested up to: 4.8.0
 Stable tag: 1.0.0

@@ -39,7 +39,7 @@
              * @access      public
              * @return      void
              */
-            function __construct( $field = array(), $value = '', $parent ) {
+            function __construct( $field, $value, $parent ) {
 
                 $this->parent   = $parent;
                 $this->field    = $field;
@@ -93,7 +93,7 @@
                     <p>
                         <a href="javascript:void(0);" id="redux-import-code-button" class="button-secondary">
                             <?php esc_html_e( 'Import from File', 'redux-framework' ); ?>
-                        </a> 
+                        </a>
                         <a href="javascript:void(0);" id="redux-import-link-button" class="button-secondary">
                             <?php esc_html_e( 'Import from URL', 'redux-framework' ) ?>
                         </a>

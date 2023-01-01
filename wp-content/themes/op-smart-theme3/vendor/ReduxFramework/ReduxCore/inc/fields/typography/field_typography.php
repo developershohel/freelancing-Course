@@ -47,7 +47,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
          *
          * @since ReduxFramework 1.0.0
          */
-        function __construct( $field = array(), $value = '', $parent ) {
+        function __construct( $field, $value, $parent ) {
             $this->parent = $parent;
             $this->field  = $field;
             $this->value  = $value;
@@ -747,15 +747,15 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 if ( ! empty( $this->field['output'] ) && is_array( $this->field['output'] ) ) {
                     $keys = implode( ",", $this->field['output'] );
                     $this->parent->outputCSS .= $keys . "{" . $style . '}';
-                    
+
                     if ( isset( $this->parent->args['async_typography'] ) && $this->parent->args['async_typography'] ) {
                         $key_string    = "";
                         $key_string_ie = "";
-                        
+
                         foreach ( $this->field['output'] as $value ) {
                             if (strpos($value,',') !== false) {
                                 $arr = explode(',', $value);
-                                
+
                                 foreach ($arr as $subvalue) {
                                     $key_string .= ".wf-loading " . $subvalue . ',';
                                     $key_string_ie .= ".ie.wf-loading " . $subvalue . ',';
@@ -765,7 +765,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                                 $key_string_ie .= ".ie.wf-loading " . $value . ',';
                             }
                         }
-                        
+
                         $this->parent->outputCSS .= rtrim( $key_string, ',' ) . "{}";
                         $this->parent->outputCSS .= rtrim( $key_string_ie, ',' ) . "{}";
                     }
@@ -777,11 +777,11 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                     if ( isset( $this->parent->args['async_typography'] ) && $this->parent->args['async_typography'] ) {
                         $key_string    = "";
                         $key_string_ie = "";
-                        
+
                         foreach ( $this->field['compiler'] as $value ) {
                             if (strpos($value,',') !== false) {
                                 $arr = explode(',', $value);
-                                
+
                                 foreach ($arr as $subvalue) {
                                     $key_string .= ".wf-loading " . $subvalue . ',';
                                     $key_string_ie .= ".ie.wf-loading " . $subvalue . ',';
@@ -789,7 +789,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                             } else {
                                 $key_string .= ".wf-loading " . $value . ',';
                                 $key_string_ie .= ".ie.wf-loading " . $value . ',';
-                            }                        
+                            }
                         }
 
                         $this->parent->compilerCSS .= rtrim( $key_string, ',' ) . "{opacity: 0;}";

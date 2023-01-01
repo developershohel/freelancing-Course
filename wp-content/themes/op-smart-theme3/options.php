@@ -185,11 +185,11 @@ function opSaveSiteIcon($options, $css, $changedValues)
 
                 // global $wp_site_icon;
                 // $object = $wp_site_icon->create_attachment_object($cropped, $attachmentId);
-                $object = WP_Site_Icon::create_attachment_object($cropped, $attachmentId);
+                $object = (new WP_Site_Icon)->create_attachment_object($cropped, $attachmentId);
                 unset($object['ID']);
 
                 // $attachmentId = $wp_site_icon->insert_attachment($object, $cropped);
-                WP_Site_Icon::insert_attachment($object, $cropped);
+                (new WP_Site_Icon)->insert_attachment($object, $cropped);
                 update_option('site_icon', $attachmentId);
 
             } else {
@@ -240,6 +240,7 @@ function opTypographyCssOutput($field)
         'typography_basic_h4_font_size',
         'typography_basic_h5_font_size',
         'typography_basic_h6_font_size',
+        'typography_basic_archive_title_font_size',
     );
 
     $advancedTypographyFields = array(
@@ -254,6 +255,7 @@ function opTypographyCssOutput($field)
         'typography_h4',
         'typography_h5',
         'typography_h6',
+        'typography_archive_title'
     );
 
     if ((int) $op_options['typography_advanced'] === 1 && true === in_array($field['id'], $basicTypographyFields)) {
@@ -780,6 +782,7 @@ function opOptinFormSettingsFields($defaults = true, $prefix = '', $nr = 1)
                 // array('integration_current', 'equals', $nr),
                 array($prefix . '_integration_type_' . $nr, 'not', 'email'),
                 array($prefix . '_integration_type_' . $nr, 'not', 'custom'),
+                array($prefix . '_integration_type_' . $nr, 'not', 'keap'),
                 array($prefix . '_integration_type_' . $nr, 'not', 'oneshoppingcart'),
                 array($prefix . '_integration_type_' . $nr, 'not', 'arpreach'),
                 array($prefix . '_integration_type_' . $nr, 'not', 'webhook'),
@@ -806,7 +809,7 @@ function opOptinFormSettingsFields($defaults = true, $prefix = '', $nr = 1)
             'default'   => '',
             'class'     => 'op-integration-type-tag',
             'required'  => array(
-                array($prefix . '_integration_type_' . $nr, 'equals', array('activecampaign', 'campaignrefinery', 'convertkit', 'drip', 'egoi', 'getresponse', 'infusionsoft', 'klicktipp', 'mautic', 'ontraport', 'sendlane')),
+                array($prefix . '_integration_type_' . $nr, 'equals', array('activecampaign', 'campaignrefinery', 'convertkit', 'drip', 'egoi', 'getresponse', 'infusionsoft', 'keap', 'klicktipp', 'mautic', 'ontraport', 'sendlane')),
             ),
         ),
         array(
@@ -1140,7 +1143,7 @@ function opOptinFormSettingsFields($defaults = true, $prefix = '', $nr = 1)
             'default'   => 'disabled',
             'required'  => array(
                 array($prefix . '_integration_type_' . $nr, 'equals', array(
-                    'activecampaign', 'arpreach', 'aweber', 'campaignmonitor', 'convertkit', 'egoi', 'emma', 'icontact', 'infusionsoft', 'mailpoet', 'mailchimp', 'officeautopilot', 'ontraport', 'sendlane', 'getresponse', 'campaignrefinery', 'egoi', 'klicktipp'
+                    'activecampaign', 'arpreach', 'aweber', 'campaignmonitor', 'convertkit', 'egoi', 'emma', 'icontact', 'infusionsoft', 'mailpoet', 'mailchimp', 'officeautopilot', 'ontraport', 'sendlane', 'getresponse', 'campaignrefinery', 'egoi', 'klicktipp', 'keap'
                 )),
             ),
         ),
@@ -1153,7 +1156,7 @@ function opOptinFormSettingsFields($defaults = true, $prefix = '', $nr = 1)
             'required' => array(
                 array($prefix . '_gdpr_enabled_' . $nr, 'not', 'disabled'),
                 array($prefix . '_integration_type_' . $nr, 'equals', array(
-                    'activecampaign', 'arpreach', 'aweber', 'campaignmonitor', 'convertkit', 'egoi', 'emma', 'icontact', 'infusionsoft', 'mailpoet', 'mailchimp', 'officeautopilot', 'ontraport', 'sendlane', 'getresponse', 'campaignrefinery', 'egoi', 'klicktipp'
+                    'activecampaign', 'arpreach', 'aweber', 'campaignmonitor', 'convertkit', 'egoi', 'emma', 'icontact', 'infusionsoft', 'mailpoet', 'mailchimp', 'officeautopilot', 'ontraport', 'sendlane', 'getresponse', 'campaignrefinery', 'egoi', 'klicktipp', 'keap'
                 )),
             ),
         ),

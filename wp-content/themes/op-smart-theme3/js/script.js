@@ -365,7 +365,7 @@ jQuery(document).ready(function($) {
     // initialize
     ;(function ($, window, document) {
         ;(function () {
-            var siteKey = (typeof OP3 !== "undefined" && typeof(OP3.GoogleRecaptcha) !== "undefined") ? OP3.GoogleRecaptcha.googleRecaptchaSiteKey : '';
+            var siteKey = (typeof OP3ST !== "undefined" && typeof(OP3ST.GoogleRecaptcha) !== "undefined" && OP3ST.GoogleRecaptcha !== null) ? OP3ST.GoogleRecaptcha.googleRecaptchaSiteKey : '';
             var $form = $('[data-op3-form="op3-smart-form"]');
             $form.each(function(){
                 // adding Recaptcha token

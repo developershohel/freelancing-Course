@@ -4,52 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Developer Shohel</title>
-        <style>
-            body {
-                background-color: #f1f1f1;
-                margin: 0;
-                padding: 0;
-            }
-            .main-header {
-                background-color: #fff;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                column-gap: 25px;
-                row-gap: 25px;
-                padding: 10px 25px;
-                flex-direction: row;
-            }
-            .main-header-logo-section {
-                flex: 0 0 30%;
-                display: flex;
-                align-items: center;
-                gap: 15px;
-            }
-            .main-menu-logo {
-                float: left;
-            }
-            .site-title{
-                font-size: 18px;
-                margin: 0;
-                color: #0902e8;
-            }
-            .main-header-account {
-                flex: 0 0 20%;
-            }
-            .main-menu-navigation {
-                flex: 50%;
-            }
-            .main-menu{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                list-style: none;
-                gap: 15px;
-                margin: 0;
-                padding: 0;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header class="main-header">
@@ -78,5 +33,34 @@
                 <a class="menu-signup" href="/signup">Sign up</a>
             </div>
         </header>
+        <footer class="main-footer">
+            <div class="footer-widgets">
+                <div class="footer-company-section">
+                    <img class="footer-logo" src="./assets/img/developershohel.png" alt="Developer Shohel">
+                    <p class="company-desc">VMS Universe is a IT Company. Our company createted software and web application for any institute</p>
+                </div>
+                <div class="footer-menu-section">
+                    <h2 class="footer-title">Usefull Links</h2>
+                    <ul class="footer-menu">
+                        <li class="menu-item"><a class="menu-link" href="/">Home</a></li>
+                        <li class="menu-item"><a class="menu-link" href="/about-us">About Us</a></li>
+                        <li class="menu-item"><a class="menu-link" href="/contact-us">Contact Us</a></li>
+                        <li class="menu-item"><a class="menu-link" href="/privacy-policy">Privacy Policy</a></li>
+                        <li class="menu-item"><a class="menu-link" href="/terms-and-codition">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social-menu">
+                    <h2 class="footer-title">Follow Us</h2>
+                    <ul class="social-menu">
+                        <li class="menu-item"><a class="menu-link" target="_blank" href="https://facebook.com/developershohel">Facebook</a></li>
+                        <li class="menu-item"><a class="menu-link" target="_blank" href="https://instagram.com/developer_shohel">Instagram</a></li>
+                        <li class="menu-item"><a class="menu-link" target="_blank" href="https://twitter.com/developershohel">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copywrite-text">
+                <p>&copy; 2024 <a href="/" class="copywrite-link">Developer Shohel</a>. <span>All right reserve.</span></p>
+            </div>
+        </footer>
     </body>
 </html>

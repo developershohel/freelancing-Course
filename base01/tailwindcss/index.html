@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                  },
+                  screens: {
+                'xs': '300px',
+                'sm': '300px',
+                'md': '768px',
+                'lg': '1024px',
+                'xl': '1280px',
+                '2xl': '1536px',
+                '3xl': '1920px',  // Example of adding a larger breakpoint
+            },
+                }
+              }
+            }
+          </script>
+    </head>
+    <body>
+        <h1 class="text-3xl font-bold underline text-red-400 bg-gradient-to-r from-cyan-500 to-blue-500 lg:text-4xl md:text-2xl sm:text-lg">Hello world!</h1>
+
+        <div class="grid-template grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-3 my-7 mx-7">
+            <div class="min-h-[300px] bg-red-400"></div>
+            <div class="min-h-[300px] bg-blue-400"></div>
+            <div class="min-h-[300px] bg-green-400"></div>
+            <div class="min-h-[300px] bg-clifford"></div>
+            <div class="min-h-[300px] bg-orange-400"></div>
+            <div class="min-h-[300px] bg-purple-400"></div>
+            <div class="min-h-[300px] bg-rose-400"></div>
+            <div class="min-h-[300px] bg-pink-400"></div>
+            <div class="min-h-[300px] bg-cyan-400"></div>
+            <div class="min-h-[300px] bg-indigo-400"></div>
+            <div class="min-h-[300px] bg-yellow-400"></div>
+            <div class="min-h-[300px] bg-lime-400"></div>
+        </div>
+    </body>
+</html>

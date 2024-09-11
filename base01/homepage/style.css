@@ -1,0 +1,128 @@
+body {
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+.main-header {
+    background-color: rgba(0,0,0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 25px;
+    row-gap: 25px;
+    padding: 10px 25px;
+    flex-direction: row;
+}
+.main-header-logo-section {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.main-menu-logo {
+    float: left;
+}
+.site-title{
+    font-size: 18px;
+    margin: 0;
+    color: #11d5f9;
+}
+.main-header-account {
+    flex: 0 0 20%;
+    justify-self: flex-end;
+}
+.main-header-account a{
+    padding: 8px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #11d5f9;
+    border: 1px solid #11d5f9;
+    font-size: 16px;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+.main-header-account a:hover{
+    color: #fff;
+    border-color: #11d5ff;
+    background-color: #11d5ff;
+}
+.main-menu-navigation {
+    flex: 50%;
+}
+.main-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #11d5f9;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+.main-menu a:hover{
+    color: #11d5ff;
+}
+.main-footer{
+    background-color: #111;
+    color: #fff;
+}
+
+.footer-widgets{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 25px;
+}
+
+.footer-widgets >div{
+    flex: 0 0 32%;
+}
+.footer-title{
+    text-align: center;
+    color: #11d5f9;
+}
+.footer-widgets ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    row-gap: 15px;
+}
+
+.footer-widgets a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.footer-widgets a:hover{
+    color: #11d5f9;
+    transform: translateX(5px);
+}
+.footer-company-section img{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: auto;
+    border-radius: 25px;
+}
+.footer-company-section p{
+    text-align: center;
+}
+.copywrite-text{
+    text-align: center;
+    padding-bottom: 15px;
+    border-top: 1px solid #ffffff22;
+}
+.copywrite-text a{
+    color: #11d5f9;
+    text-decoration: none;
+}

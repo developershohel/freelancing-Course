@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h3 id="demo">Click Event</h3>
+        <button id="show-form">Form Toggle</button>
+        <form id="myForm" action="/login">
+            <input type="text" id="myInput" />
+            <label>
+                Choose an ice cream flavor:
+                <select class="ice-cream" name="ice-cream">
+                  <option value="">Select One …</option>
+                  <option value="chocolate">Chocolate</option>
+                  <option value="sardine">Sardine</option>
+                  <option value="vanilla">Vanilla</option>
+                </select>
+              </label>
+            <textarea rows="9" cols="50" id="textarea"></textarea>
+            <input type="submit" id="form-submit" value="submit">
+        </form>
+          
+          <div class="result" id="result"></div>
+          
+        <script src="event.js"></script>
+    </body>
+</html>

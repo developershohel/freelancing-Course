@@ -28,7 +28,8 @@ toggleButton.addEventListener("click", (event) => {
 document.getElementById('form-submit').addEventListener('click', (e)=>{
     e.preventDefault()
     console.log(e);
-    e.target.click = true;
+    document.getElementById('form-submit').click()
+    e.stopPropagation()
 })
 toggleButton.addEventListener("mouseover", (event) => {
     console.log("mosueover");

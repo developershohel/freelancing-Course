@@ -8,3 +8,17 @@
 #myForm.open{
   display: block;
 }
+.application-outlet{
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+}
+.fomr-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.fomr-wrapper >div{
+  flex: 0 0 50%
+}

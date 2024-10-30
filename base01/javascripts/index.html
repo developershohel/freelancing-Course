@@ -4,14 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" href="style.css">
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
         <style>
-          .main-menu{
-            transition: all 0.3s linear;
-          }
-          .show-menu{
-            transform: translateX(0) !important;
-          }
+            .main-menu {
+                transition: all 0.3s linear;
+            }
+            .show-menu {
+                transform: translateX(0) !important;
+            }
         </style>
         <script>
             tailwind.config = {
@@ -62,112 +63,629 @@
                     </ul>
                 </nav>
                 <div class="toggle-button">
-                    <button type="button" class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2" id="toggle-button" draggable="true">
+                    <button
+                        type="button"
+                        class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2"
+                        id="toggle-button"
+                        draggable="true"
+                    >
                         Toggle button
                     </button>
                 </div>
             </div>
         </div>
-        <div class="dropbox w-[300px] h-[300px] border border-red-400" draggable="true">
-          <button type="button" class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2" id="toggle-button2" draggable="true">
-            Toggle button
-        </button>
+        <div
+            class="dropbox w-[300px] h-[300px] border border-red-400"
+            draggable="true"
+        >
+            <button
+                type="button"
+                class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2"
+                id="toggle-button2"
+                draggable="true"
+            >
+                Toggle button
+            </button>
         </div>
         <div class="application-outlet mx-auto p-4">
-            <div class="w-full max-w-md bg-white shadow-md rounded-lg p-8">
-                <h2 class="text-2xl font-bold mb-6 text-gray-700">
-                    Create an Account
-                </h2>
+            <div class="fomr-wrapper">
+                <div class="w-full max-w-md bg-white shadow-md rounded-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-700">
+                        Create an Account
+                    </h2>
 
-                <form action="/submit-form" method="POST" class="singup-form">
-                    <!-- Name -->
-                    <div class="mb-4">
-                        <label
-                            class="block text-gray-700 font-medium mb-2"
-                            for="name"
-                            >Name</label
-                        >
-                        <input
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Your name"
-                        />
-                    </div>
-                    <div class="mb-4">
-                        <label
-                            class="block text-gray-700 font-medium mb-2"
-                            for="name"
-                            >Website</label
-                        >
-                        <input
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            type="url"
-                            id="name"
-                            name="name"
-                            placeholder="Your name"
-                        />
-                    </div>
-                    <div class="mb-4">
-                        <label
-                            class="block text-gray-700 font-medium mb-2"
-                            for="name"
-                            >Number</label
-                        >
-                        <input
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            type="number"
-                            id="name"
-                            name="name"
-                            placeholder="Your name"
-                        />
-                    </div>
+                    <form
+                        action="/submit-form"
+                        method="POST"
+                        class="singup-form"
+                    >
+                        <!-- Name -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Name</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Website</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="url"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Number</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="number"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
 
-                    <!-- Email -->
-                    <div class="mb-4">
-                        <label
-                            class="block text-gray-700 font-medium mb-2"
-                            for="email"
-                            >Email</label
-                        >
-                        <input
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Your email"
-                        />
-                    </div>
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="email"
+                                >Email</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                            />
+                        </div>
 
-                    <!-- Password -->
-                    <div class="mb-6">
-                        <label
-                            class="block text-gray-700 font-medium mb-2"
-                            for="password"
-                            >Password</label
-                        >
-                        <input
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Choose a password"
-                        />
-                    </div>
+                        <!-- Password -->
+                        <div class="mb-6">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="password"
+                                >Password</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Choose a password"
+                            />
+                        </div>
 
-                    <!-- Submit Button -->
-                    <div>
-                        <button id="form-submit"
-                            type="submit"
-                            class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-                        >
-                            Sign Up
-                        </button>
-                    </div>
-                </form>
+                        <!-- Submit Button -->
+                        <div>
+                            <button
+                                id="form-submit"
+                                type="submit"
+                                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="w-full max-w-md bg-white shadow-md rounded-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-700">
+                        Create an Account
+                    </h2>
+
+                    <form
+                        action="/submit-form"
+                        method="POST"
+                        class="singup-form"
+                    >
+                        <!-- Name -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Name</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Website</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="url"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Number</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="number"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="email"
+                                >Email</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                            />
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-6">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="password"
+                                >Password</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Choose a password"
+                            />
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button
+                                id="form-submit"
+                                type="submit"
+                                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="w-full max-w-md bg-white shadow-md rounded-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-700">
+                        Create an Account
+                    </h2>
+
+                    <form
+                        action="/submit-form"
+                        method="POST"
+                        class="singup-form"
+                    >
+                        <!-- Name -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Name</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Website</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="url"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Number</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="number"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="email"
+                                >Email</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                            />
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-6">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="password"
+                                >Password</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Choose a password"
+                            />
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button
+                                id="form-submit"
+                                type="submit"
+                                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="w-full max-w-md bg-white shadow-md rounded-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-700">
+                        Create an Account
+                    </h2>
+
+                    <form
+                        action="/submit-form"
+                        method="POST"
+                        class="singup-form"
+                    >
+                        <!-- Name -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Name</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Website</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="url"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Number</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="number"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="email"
+                                >Email</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                            />
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-6">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="password"
+                                >Password</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Choose a password"
+                            />
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button
+                                id="form-submit"
+                                type="submit"
+                                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="w-full max-w-md bg-white shadow-md rounded-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-700">
+                        Create an Account
+                    </h2>
+
+                    <form
+                        action="/submit-form"
+                        method="POST"
+                        class="singup-form"
+                    >
+                        <!-- Name -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Name</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Website</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="url"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="name"
+                                >Number</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="number"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="email"
+                                >Email</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                            />
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-6">
+                            <label
+                                class="block text-gray-700 font-medium mb-2"
+                                for="password"
+                                >Password</label
+                            >
+                            <input
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Choose a password"
+                            />
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button
+                                id="form-submit"
+                                type="submit"
+                                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+        <div class="w-full max-w-md bg-white shadow-md rounded-lg p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-700">
+                Create an Account
+            </h2>
+
+            <form
+                action="/submit-form"
+                method="POST"
+                class="singup-form"
+            >
+                <!-- Name -->
+                <div class="mb-4">
+                    <label
+                        class="block text-gray-700 font-medium mb-2"
+                        for="name"
+                        >Name</label
+                    >
+                    <input
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                    />
+                </div>
+                <div class="mb-4">
+                    <label
+                        class="block text-gray-700 font-medium mb-2"
+                        for="name"
+                        >Website</label
+                    >
+                    <input
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        type="url"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                    />
+                </div>
+                <div class="mb-4">
+                    <label
+                        class="block text-gray-700 font-medium mb-2"
+                        for="name"
+                        >Number</label
+                    >
+                    <input
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        type="number"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                    />
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label
+                        class="block text-gray-700 font-medium mb-2"
+                        for="email"
+                        >Email</label
+                    >
+                    <input
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                    />
+                </div>
+
+                <!-- Password -->
+                <div class="mb-6">
+                    <label
+                        class="block text-gray-700 font-medium mb-2"
+                        for="password"
+                        >Password</label
+                    >
+                    <input
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Choose a password"
+                    />
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button
+                        id="form-submit"
+                        type="submit"
+                        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                    >
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+        </div>
+        <button
+            id="scrollToTop"
+            type="button"
+            style="position: fixed; right: 50px; bottom: 100px; display: none"
+        >
+            Top
+        </button>
         <script src="app.js"></script>
     </body>
 </html>

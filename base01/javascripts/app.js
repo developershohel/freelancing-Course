@@ -11,11 +11,11 @@ const dropBox = document.querySelector(".dropbox");
 // }
 
 // Events
-console.log(document.getElementById('name'))
-document.getElementById('name').addEventListener('input', (e)=>{
+console.log(document.getElementById("name"));
+document.getElementById("name").addEventListener("input", (e) => {
     console.log(e);
     console.log(e.target.value);
-})
+});
 toggleButton.addEventListener("click", (event) => {
     console.log(event);
     mainMenu.classList.toggle("show-menu");
@@ -25,12 +25,12 @@ toggleButton.addEventListener("click", (event) => {
 //     console.log(e);
 //     e.target.submit()
 // })
-document.getElementById('form-submit').addEventListener('click', (e)=>{
-    e.preventDefault()
+document.getElementById("form-submit").addEventListener("click", (e) => {
+    e.preventDefault();
     console.log(e);
-    document.getElementById('form-submit').click()
-    e.stopPropagation()
-})
+    document.getElementById("form-submit").click();
+    e.stopPropagation();
+});
 toggleButton.addEventListener("mouseover", (event) => {
     console.log("mosueover");
     console.log(event);
@@ -109,7 +109,7 @@ toggleButton.addEventListener("wheel", (event) => {
     console.log("wheel");
     console.log(event);
 });
-document.getElementById('toggle-button2').addEventListener("drag", (event) => {
+document.getElementById("toggle-button2").addEventListener("drag", (event) => {
     console.log("drag");
     console.log(event);
 });
@@ -147,3 +147,18 @@ toggleButton.addEventListener("sroll", (event) => {
     console.log("sroll");
     console.log(event);
 });
+const scrollToTop = document.getElementById("scrollToTop");
+window.onscroll = function (e) {
+    const clientY = window.scrollY;
+   
+    if (clientY > 300) {
+        scrollToTop.style.display = "inline-block";
+    } else {
+        console.log(window.scrollY);
+        scrollToTop.style.display = "none";
+    }
+};
+
+scrollToTop.addEventListener('click', function scrolltotop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+})

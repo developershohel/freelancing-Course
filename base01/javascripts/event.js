@@ -93,6 +93,7 @@ handleFormAttribute(inputEmail, [{attr: 'type', val: 'email'},{attr: 'id', val: 
 inputField.after(inputEmail)
 
 function handleFormAttribute(element, value = []){
+    console.log(value.length);
     if(value.length > 0){
         for (let index = 0; index < value.length; index++) {
             element.setAttribute(value[index].attr, value[index].val)

@@ -1,0 +1,34 @@
+h1 {
+    color: blue;
+}
+
+.blog-one * {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: aqua;
+}
+p {
+    color: red;
+    font-size: 18px;
+}
+[data-name="name"] {
+    color: blue;
+}
+
+.main-content-wrapper {
+    display: flex;
+}
+
+.main-content-wrapper a {
+    color: blueviolet;
+    font-size: 20px;
+}
+.second.class.first-section#first-second {
+    background-color: red;
+}
+#first-second,
+sidebar {
+    background-color: red;
+}

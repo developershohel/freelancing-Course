@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body{
+    background-color: #f2f2f2;
+    font-family:"Lato", serif;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.entry-title{
+    color: #111111;
+    font-size: 35px;
+}
+
+.blog-content-title{
+    font-size: 20px;
+}
+
+.desc{
+    color: #222;
+    font-size: 16px;
+}
+
+.blog-desc{
+    font-size: 14px;
+}
+
+.blog-section-wrapper{
+    padding: 50px;
+}
+.blog-section-heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.blog-section-wrap{
+    display: flex;
+    gap: 50px;
+}
+
+.blog-section-wrap article{
+    flex: 0 0 30%;
+    max-width: 30%;
+    background-color: #ffffff;
+}
+
+.blog-content{
+    text-align: center;
+    padding:0 25px 50px 25px;
+}
+
+.vms-btn{
+    display: inline-block;
+    padding: 8px 25px;
+    min-height: 30px;
+    background-color: #111111;
+    border: 1px solid #111111;
+} 
+.btn-round{
+    border-radius: 24px;
+}
+.vms-btn-outline-primary{
+    background-color: transparent;
+}
+
+.blog-link{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 2px 25px;
+    width: max-content;
+    margin: 0 auto;
+}

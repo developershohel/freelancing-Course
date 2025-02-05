@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="style.css" />
+        <style>
+            .blog-one * {
+                margin: 0;
+                padding: 0;
+            }
+            a {
+                color: aqua;
+            }
+            p {
+                color: red;
+                font-size: 18px;
+            }
+            [data-name="name"] {
+                color: blue;
+            }
+
+            .main-content-wrapper {
+                display: flex;
+            }
+
+            .main-content-wrapper a {
+                color: blueviolet;
+                font-size: 20px;
+            }
+            .second.class.first-section#first-second {
+                background-color: red;
+            }
+            #first-second,
+            sidebar {
+                background-color: red;
+            }
+            [title] {
+                color: yellow;
+            }
+
+            [class~="highlight"] {
+                background-color: yellow;
+            }
+            [href^="https"] {
+                color: green;
+            }
+            [src$=".jpg"] {
+                border: 2px solid red;
+            }
+            [href*="example"] {
+                text-decoration: none;
+            }
+            /* [href="http://google.com"],  */
+            /* [class~="no-secure"] */
+            /* .no-secure, */
+            /* #no-secure, */
+            /* [href^="http:"], */
+            [href$="google.com"]
+            {
+               color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <main style="display: flex">
+            <a href="https://example.com">Secure Link</a>
+            <a href="http://google.com" class="no-secure link" id="no-secure">Non-Secure Link</a>
+            <p class="highlight important">This paragraph is highlighted.</p>
+            <p class="important">This paragraph is not highlighted.</p>
+            <div class="main-content-wrapper">
+                <section
+                    class="first-section second class"
+                    id="first-second"
+                    data-name="name"
+                    html="html"
+                >
+                    <div class="blog-one highlight">
+                        <h2>Blog</h2>
+                        <p>this is sidebar</p>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Fuga vero unde nisi dolores delectus,
+                            exercitationem perspiciatis minima, aperiam dolore
+                            sint architecto repellat fugiat vitae, aut voluptate
+                            voluptatibus excepturi nobis dolorem.
+                        </p>
+                    </div>
+                    <div style="display: flex">
+                        <article>
+                            <img
+                                src="freelancer developer shohel hossain.jpg"
+                                alt="image"
+                            />
+                            <h4>This is blog one</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Cum iste totam quos eos, magni
+                                beatae animi fugit quasi necessitatibus commodi
+                                cumque deleniti porro esse ut molestiae ipsa
+                                dignissimos ad doloribus.
+                            </p>
+                            <a href="#" title="this is demo titile"
+                                >Learn more</a
+                            >
+                        </article>
+                        <article>
+                            <img
+                                src="freelancer developer shohel hossain.jpg"
+                                alt="image"
+                            />
+                            <h4>This is blog one</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Cum iste totam quos eos, magni
+                                beatae animi fugit quasi necessitatibus commodi
+                                cumque deleniti porro esse ut molestiae ipsa
+                                dignissimos ad doloribus.
+                            </p>
+                            <a href="#">Learn more</a>
+                        </article>
+                        <article>
+                            <img
+                                src="freelancer developer shohel hossain.jpg"
+                                alt="image"
+                            />
+                            <h4>This is blog one</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Cum iste totam quos eos, magni
+                                beatae animi fugit quasi necessitatibus commodi
+                                cumque deleniti porro esse ut molestiae ipsa
+                                dignissimos ad doloribus.
+                            </p>
+                            <a href="#">Learn more</a>
+                        </article>
+                    </div>
+                </section>
+                <section id="first">demo section</section>
+            </div>
+            <sidebar id="first"> <p>this is sidebar</p> </sidebar>
+        </main>
+    </body>
+</html>

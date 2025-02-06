@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login Page</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../class-two/signup.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .login-form-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: linear-gradient(135deg, #4a00e0, #e100ff);
+            }
+
+            .container {
+                background: #fff;
+                padding: 40px;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                width: 350px;
+            }
+
+            .container h2 {
+                margin-bottom: 20px;
+            }
+
+            .input-group {
+                position: relative;
+                width: 100%;
+                margin-bottom: 10px;
+                text-align: left;
+            }
+
+            .input-group label {
+                display: block;
+                margin-bottom: 15px;
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 10px;
+                padding-left: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                font-size: 14px;
+            }
+
+            .input-group i {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #777;
+            }
+
+            .forgot-password {
+                text-align: left;
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+
+            .forgot-password a {
+                text-decoration: left;
+                color: #4a00e0;
+                font-weight: 500;
+            }
+
+            .login-btn {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 25px;
+                background: linear-gradient(135deg, #e100ff, #5304f3);
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+
+            .login-btn:hover {
+                opacity: 0.9;
+            }
+
+            .social-login {
+                margin: 20px 0;
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .social-login a {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 18px;
+                text-decoration: none;
+            }
+
+            .facebook {
+                background: #3b5998;
+            }
+            .twitter {
+                background: #1da1f2;
+            }
+            .google {
+                background: #db4437;
+            }
+
+            .signup {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+
+            .signup a {
+                color: #4a00e0;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .social-media-login-desc {
+                display: block;
+                margin-top: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="login-form-wrapper">
+            <div class="container">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Type your username"
+                    />
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <label for="password" style="text-align: left"
+                        >Password</label
+                    >
+                    <input class="form-field" type="password" placeholder="Type your password" />
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button class="login-btn">LOGIN</button>
+
+                <p class="social-media-login-desc">Or Login Using</p>
+                <div class="social-login">
+                    <a href="#" class="facebook">F</a>
+                    <a href="#" class="twitter">T</a>
+                    <a href="#" class="google">G</a>
+                </div>
+
+                <p class="signup">Or Sign Up Using <a href="#">SIGN UP</a></p>
+            </div>
+        </section>
+        <script
+            src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

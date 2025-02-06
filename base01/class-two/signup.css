@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+    --pink-color: #ce79e9;
+    --pink-two: #e358a6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: "Lato", serif;
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.entry-title {
+    color: #111111;
+    font-size: 35px;
+}
+
+.blog-content-title {
+    font-size: 20px;
+}
+
+.desc {
+    color: #222;
+    font-size: 16px;
+}
+
+.blog-desc {
+    font-size: 14px;
+}
+
+.blog-section-wrapper {
+    padding: 50px;
+}
+.blog-section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.blog-section-wrap {
+    display: flex;
+    gap: 50px;
+}
+
+.blog-section-wrap article {
+    flex: 0 0 30%;
+    max-width: 30%;
+    background-color: #ffffff;
+}
+
+.blog-content {
+    text-align: center;
+    padding: 0 25px 50px 25px;
+}
+
+.vms-btn {
+    display: inline-block;
+    padding: 8px 25px;
+    min-height: 30px;
+    background-color: #111111;
+    border: 1px solid #111111;
+}
+.btn-round {
+    border-radius: 24px;
+}
+.vms-btn-outline-primary {
+    background-color: transparent;
+}
+
+.blog-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 2px 25px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.signup-form-wrapper {
+    display: flex;
+    background-color: #ffffff;
+}
+
+.signup-form-image {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.signup-form-wrap {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 25px 50px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-terms-wrap {
+    flex-direction: row;
+    align-items: center;
+}
+.form-terms-wrap .form-label {
+    margin-bottom: 0;
+}
+.form-label {
+    color: #444;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form-field {
+    min-height: 30px;
+    padding: 8px 25px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid #444;
+}
+
+.form-field:focus,
+.form-field:focus-within,
+.form-field:focus-visible {
+    border-color: #666;
+    outline: none;
+}
+
+.form-field::placeholder {
+    color: #666;
+}
+
+.login-btn,
+#form-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #e100ff, #5304f3);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover,
+#form-submit:hover {
+    opacity: 0.9;
+}
+
+.form-submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.form-submit-button a {
+    color: #5304f3;
+    text-decoration: none;
+}

@@ -1,0 +1,49 @@
+body {
+    background-color: #9ad7f5;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+form {
+    background: rgb(4, 92, 174);
+    padding: 80px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+footer {
+    text-align: center;
+
+    background: #6deccc;
+}
+
+.header {
+    text-align: center;
+    background: #6deccc;
+
+    padding: 10px 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.card img {
+    width: 100%;
+    min-height: 250px;
+    border-radius: 5px;
+    object-fit: auto;
+}

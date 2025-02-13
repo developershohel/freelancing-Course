@@ -132,7 +132,7 @@ img {
 .form-field:focus,
 .form-field:focus-within,
 .form-field:focus-visible {
-    border-color: #666;
+    border: 1px dotted #666;
     outline: none;
 }
 
@@ -167,4 +167,12 @@ img {
 .form-submit-button a {
     color: #5304f3;
     text-decoration: none;
+}
+
+.form-login:active{
+    color: green;
+}
+
+.form-login:visited{
+    color: red;
 }

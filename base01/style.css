@@ -1,76 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+body {
     background-color: #f2f2f2;
-    font-family:"Lato", serif;
+    font-family: "Lato", serif;
 }
 
-img{
+img {
     width: 100%;
     height: auto;
 }
 
-.entry-title{
+.entry-title {
     color: #111111;
     font-size: 35px;
 }
 
-.blog-content-title{
+.blog-content-title {
     font-size: 20px;
 }
 
-.desc{
+.desc {
     color: #222;
     font-size: 16px;
 }
 
-.blog-desc{
+.blog-desc {
     font-size: 14px;
 }
 
-.blog-section-wrapper{
+.blog-section-wrapper {
     padding: 50px;
 }
-.blog-section-heading{
+.blog-section-heading {
     text-align: center;
     margin-bottom: 50px;
 }
 
-
-.blog-section-wrap{
+.blog-section-wrap {
     display: flex;
     gap: 50px;
 }
 
-.blog-section-wrap article{
+.blog-section-wrap article {
     flex: 0 0 30%;
     max-width: 30%;
     background-color: #ffffff;
 }
 
-.blog-content{
+.blog-content {
     text-align: center;
-    padding:0 25px 50px 25px;
+    padding: 0 25px 50px 25px;
 }
 
-.vms-btn{
+.vms-btn {
     display: inline-block;
     padding: 8px 25px;
     min-height: 30px;
     background-color: #111111;
     border: 1px solid #111111;
-} 
-.btn-round{
+}
+.btn-round {
     border-radius: 24px;
 }
-.vms-btn-outline-primary{
+.vms-btn-outline-primary {
     background-color: transparent;
 }
 
-.blog-link{
+.blog-link {
     text-decoration: none;
     display: flex;
     align-items: center;
     padding: 2px 25px;
     width: max-content;
     margin: 0 auto;
+}
+
+.hover-transitions {
+    transition: all 0.3s ease-in-out;
+}
+
+.content button:first-child {
+    background-color: blueviolet;
+}
+.content button:nth-child(3) {
+    background-color: aqua;
+}
+
+.content button:last-child {
+    background-color: green;
+}
+
+.hover-transitions:hover {
+    background-color: #222;
+    color: #ffffff;
+}
+/* 
+.content :not(.not){
+    color: yellow;
+} */
+
+.content button:nth-child(2):hover {
+    /* transform: scale(1.2, 1.2); */
+    transform: skew(0.8turn);
+}
+
+.content button:first-child:hover {
+    animation: classThree 2s infinite ease-in-out;
+}
+
+@keyframes classThree {
+    0% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+.content button:last-child {
+    transform: rotate(0);
+    background-color: red;
+}
+
+.content button:nth-child(4):hover {
+    animation: rotate360 2s infinite ease-in-out;
+    animation-direction: reverse;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

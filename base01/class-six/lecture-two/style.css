@@ -1,0 +1,51 @@
+.form-group{
+    margin-bottom: 25px;
+}
+
+.form-inline{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.form-group label{
+    color: #ffdd12;
+    margin-bottom: 15px;
+}
+
+.form-group input{
+    color: #fff;
+}
+.field{
+    background: #3D366C;
+    min-height: 30px;
+    padding: 5px 25px;
+    border: 1px solid #fff;
+}
+
+.name-field-wrap.form-inline > div {
+    display: flex;
+    align-items: center;
+    background: #3D366C;
+    min-height: 30px;
+    padding: 5px 25px;
+    border: 1px solid #fff;
+}
+
+.name-field-wrap.form-inline{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.name-field-wrap.form-inline > div{
+    flex: 0 0 50%;
+    max-width: 30%;
+}
+
+.name-field-wrap.form-inline > div label{
+    margin-bottom: 0;
+}
+
+.form-resume{
+    display: flex;
+    flex-direction: column;
+}

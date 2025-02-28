@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Use case of color</title>
+        <style>
+            .btn {
+                min-height: 30px;
+                padding: 8px 24px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .mt {
+                margin-top: 25px;
+            }
+
+            .mtl {
+                margin-top: 50px;
+            }
+
+            .btn-primary {
+                background-color: rgb(0 85 225);
+                border-color: rgb(0 85 225);
+                outline: none;
+                box-shadow: none;
+                color: #ffffff;
+                border-style: solid;
+                /* animation: primaryButtonAnmation 500ms ease-in-out infinite; */
+                transition: all 250ms ease-in-out;
+            }
+
+            .btn-primary:hover{
+                background-color: rgb(0 100 255);
+                border-color: rgb(0 100 255);
+                animation: primaryButtonAnmation 500ms linear infinite;
+            } 
+
+            .btn-round-full {
+                border-radius: 24px;
+            }
+
+            .btn-rect {
+                margin-top: 50px;
+                border-top-left-radius: 24px;
+                border-bottom-right-radius: 24px;
+            }
+
+            .btn-gdc {
+                background: linear-gradient(
+                    105deg,
+                    rgb(0 100 225) 0%,
+                    rgb(0 150 250) 65%,
+                    rgb(0 150 255) 100%
+                );
+                border-width: 0;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            .btn-gdc:hover {
+                animation: btngdc 500ms ease-in-out infinite;
+            }
+
+            @keyframes btngdc {
+                0% {
+                    background: linear-gradient(
+                        105deg,
+                        rgb(0 100 225) 0%,
+                        rgb(0 150 250) 65%,
+                        rgb(0 150 255) 100%
+                    );
+                }
+                50% {
+                    background: linear-gradient(
+                        105deg,
+                        rgb(12, 116, 243) 0%,
+                        rgb(3, 107, 172) 65%,
+                        rgb(24, 112, 167) 100%
+                    );
+                }100%{
+                    background: linear-gradient(
+                        105deg,
+                        rgb(0 100 225) 0%,
+                        rgb(0 150 250) 65%,
+                        rgb(0 150 255) 100%
+                    );
+                }
+            }
+
+            @keyframes primaryButtonAnmation {
+                0% {
+                    transform: scale3d(1, 1, 1);
+                }
+                50% {
+                    transform: scale(1.2, 1.2);
+                }
+                100% {
+                    transform: scale3d(1, 1, 1);
+                }
+            }
+
+            .div{
+                padding: 100px;
+                margin: 200px;
+                background-color: red;
+                border-top-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" class="btn btn-primary btn-round-full">
+            Primary Button
+        </button>
+        <button type="button" class="btn btn-primary btn-rect">
+            Primary Button
+        </button>
+
+        <button type="button" class="btn btn-primary btn-gdc mt">
+            Primary Button
+        </button>
+
+        <div class="div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam inventore excepturi laborum qui et, optio similique corrupti architecto cupiditate eaque officia ea numquam minima ab iusto, ad maxime harum fugit!
+        </div>
+    </body>
+</html>

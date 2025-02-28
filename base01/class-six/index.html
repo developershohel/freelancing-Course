@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Class 6: JavaScript Fundamentals: Loops, conditionals, and arrays.
+        </title>
+    </head>
+    <body style="background-color: #f1f1f1">
+        <main class="main-content-wrapper">
+            <section class="hero-section">
+                <h1 style="color: #1070dc">
+                    Class 6: JavaScript Fundamentals: Loops, conditionals, and
+                    arrays.
+                </h1>
+            </section>
+        </main>
+        <script>
+            for (let i = 12; i > 10; i--) {
+                console.log("Iteration number: " + i);
+            }
+
+            const fruits = [
+                "apple",
+                "banana",
+                "cherry",
+                "orange",
+                "grape",
+                "watermelon",
+                "pineapple",
+                "strawberry",
+                "blueberry",
+                "mango",
+                "papaya",
+                "kiwi",
+                "peach",
+                "pear",
+                "plum",
+                "pomegranate",
+                "guava",
+                "blackberry",
+                "coconut",
+                "dragon fruit",
+            ];
+
+            const friutsObject = {
+                apple: "Apple",
+                banana: "Banana",
+                cherry: "Cherry",
+                orange: "Orange",
+                grape: "Grape",
+                watermelon: "Watermelon",
+                pineapple: "Pineapple",
+                strawberry: "Strawberry",
+                blueberry: "Blueberry",
+                mango: "Mango",
+                papaya: "Papaya",
+                kiwi: "Kiwi",
+                peach: "Peach",
+                pear: "Pear",
+                plum: "Plum",
+                pomegranate: "Pomegranate",
+                guava: "Guava",
+                blackberry: "Blackberry",
+                coconut: "Coconut",
+                "dragon fruit": "Dragon fruit",
+            };
+
+            // console.log(fruits[18]);
+
+            for (const jakononame of fruits) {
+                if (jakononame == "orange" || jakononame === "mango") {
+                    document.querySelector("body").style.backgroundColor =
+                        "#ed8011";
+                    break;
+                } else if (jakononame === "cherry") {
+                    document.querySelector("body").style.backgroundColor =
+                        "#772101";
+                    break;
+                }
+            }
+
+            let i = 0;
+            while (i < 5) {
+                console.log("While loop iteration: " + i);
+                i++;
+            }
+            let friut = 0;
+
+            while (friut < fruits.length) {
+                const jakononame = fruits[friut];
+                if (jakononame === "orange") {
+                    document.querySelector("body").style.backgroundColor =
+                        "#aa0000";
+                    break;
+                } else if (jakononame === "mango") {
+                    document.querySelector("body").style.backgroundColor =
+                        "#edaa11";
+                    break;
+                }
+                console.log(fruits[friut]);
+                friut++;
+            }
+
+            do {
+                console.log("Do-while loop iteration: " + i);
+                i++;
+            } while (i < 10);
+
+            let day = 7;
+            switch (day) {
+                case 1:
+                    console.log("Monday");
+                    break;
+                case 2:
+                    console.log("Tuesday");
+                    break;
+                case 3:
+                    console.log("Wednesday");
+                    break;
+                default:
+                    console.log("Invalid day");
+            }
+            const person = { name: "John", age: 30, city: "New York" };
+
+            for (const key in person) {
+                console.log(key + ": " + person[key]);
+            }
+
+            console.log(fruits);
+            fruits.shift();
+            console.log(fruits);
+            fruits.pop();
+            console.log(fruits);
+            fruits.unshift("apricot");
+            console.log(fruits);
+            fruits.push("lichu");
+            console.log(fruits);
+            fruits.splice(15, 1, "blueberry");
+            console.log(fruits);
+            const newFruits = fruits.slice(15, 20);
+            console.log(newFruits);
+
+            newFruits.forEach(function ($fruit) {
+                console.log($fruit);
+            });
+
+            const upperFruits = fruits.map((fruit) => fruit.toUpperCase());
+            console.log(upperFruits);
+            const longFruits = fruits.filter((fruit) => fruit.length > 6);
+            console.log(longFruits);
+
+            for (const fruit of fruits) {
+                console.log(fruit);
+            }
+        </script>
+    </body>
+</html>

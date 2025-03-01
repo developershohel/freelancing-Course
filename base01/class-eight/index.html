@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            form {
+                max-width: 350px;
+                display: block;
+                padding: 35px;
+                margin: 50px auto;
+                background-color: #111;
+                border-radius: 15px;
+            }
+            h1 {
+                color: #11dd23;
+            }
+            label {
+                color: #fff;
+            }
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                margin-bottom: 25px;
+            }
+            .form-group input {
+                padding: 4px 24px;
+                min-height: 30px;
+                outline: none;
+            }
+            input:focus,
+            input:focus-within {
+                outline: none;
+            }
+            button {
+                padding: 4px 24px;
+                min-height: 30px;
+                background-color: #11dd23;
+                border: none;
+                transform: all 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #11ee23;
+            }
+            .form-group span {
+                display: none;
+                color: #a00000;
+            }
+        </style>
+    </head>
+    <body>
+        <form
+            id="signupForm"
+            method="post"
+            action="http://127.0.0.1:5500/base01/class-eight/index.html"
+        >
+            <div class="form-group">
+                <h1>Signup Form</h1>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" />
+                <span id="userError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" />
+                <span id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" />
+                <span id="passError"></span>
+            </div>
+            <div class="form-group">
+                <button id="form-submit" type="submit">Submit</button>
+            </div>
+        </form>
+
+        <script>
+            var username = $("#username");
+            $(window).on("load", function () {
+                username.focus();
+                username.css("background-color", "#f0f8ff");
+                username.css({ borderColor: "#00ff00" });
+            });
+            jQuery(function ($) {
+                const username = $("#username");
+                const email = $("#email");
+                const password = $("#password");
+                password.blur(function () {
+                    let passwordVal = $("#password").val();
+                    if (passwordVal.length < 6) {
+                        $("#passError")
+                            .text("Password must be at least 6 characters.")
+                            .css({ display: "block" });
+                        valid = false;
+                    } else {
+                        $("#passError").text("").css({ display: "block" });
+                    }
+                });
+
+                password.change(function () {
+                    let passwordVal = $("#password").val();
+                    if (passwordVal.length < 6) {
+                        $("#passError")
+                            .text("Password must be at least 6 characters.")
+                            .css({ display: "block" });
+                        valid = false;
+                    } else {
+                        alert(passwordVal)
+                        $("#passError").text("").css({ display: "block" });
+                    }
+                });
+
+                // password.bind("keypress change", function () {
+                //     let passwordVal = $("#password").val();
+                //     if (passwordVal.length < 6) {
+                //         $("#passError")
+                //             .text("Password must be at least 6 characters.")
+                //             .css({ display: "block" });
+                //         valid = false;
+                //     } else {
+                //         alert(passwordVal);
+                //         $("#passError").text("").css({ display: "block" });
+                //     }
+                // });
+                $("#username").keypress(function () {
+                    let username = $("#username").val();
+
+                    if (username.length < 3) {
+                        $("#userError")
+                            .text("Username must be at least 3 characters.")
+                            .css({ display: "block" });
+                        valid = false;
+                    } else {
+                        $("#userError")
+                            .text("Username is valid")
+                            .css({ color: "#01ee23" });
+                    }
+                });
+                email.focus(function () {
+                    $(this).css("background-color", "#f0f8ff");
+                    $(this).css({ borderColor: "#00ff00" });
+                });
+                $("#email").on("input", function (event) {
+                    let email = $("#email").val();
+                    if (!email.includes("@")) {
+                        $("#emailError")
+                            .text("Enter a valid email.")
+                            .css({ display: "block" });
+                        valid = false;
+                    } else {
+                        $("#emailError")
+                            .text("Email is valid")
+                            .css({ color: "#01ee23" });
+                    }
+                });
+
+                $("#signupForm").on("submit", function (event) {
+                    let valid = true;
+
+                    let username = $("#username").val();
+
+                    if (username.length < 3) {
+                        $("#userError")
+                            .text("Username must be at least 3 characters.")
+                            .css({ display: "block" });
+                        valid = false;
+                    } else {
+                        $("#userError").text("").css({ display: "none" });
+                    }
+
+                    $("#userError").text(username);
+
+                    let email = $("#email").val();
+                    if (!email.includes("@")) {
+                        $("#emailError")
+                            .text("Enter a valid email.")
+                            .css({ display: "block" });
+                        valid = false;
+                    } else {
+                        $("#emailError").text("").css({ display: "none" });
+                    }
+
+                    let password = $("#password").val();
+                    if (password.length < 6) {
+                        $("#passError")
+                            .text("Password must be at least 6 characters.")
+                            .css({ display: "block" });
+                        valid = false;
+                    } else {
+                        $("#passError").text("").css({ display: "block" });
+                    }
+
+                    if (!valid) event.preventDefault();
+                });
+            });
+        </script>
+    </body>
+</html>

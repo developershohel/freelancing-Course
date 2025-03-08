@@ -1,0 +1,228 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999999;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+/* Hero Section */
+.hero {
+    background: url("../images/hero.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#about > div {
+    flex: 0 0 50%;
+    overflow: hidden;
+}
+
+#about > div:first-child {
+    background-color: #d2d2d2;
+    padding: 35px 70px 35px 35px;
+    border-radius: 18px;
+    min-height: 450px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+#about > div:first-child:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+#about > div:first-child h2 {
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+#about > div:first-child p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+#about .about-me-image {
+    max-width: 320px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+    border-radius: 18px;
+    left: -100px;
+    background-color: #d6e5e1;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.about-me-image img {
+    height: 100%;
+    width: auto;
+}
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.portfolio-item img {
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.03);
+}
+
+/* Contact Form */
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #555;
+}
+
+.portfolio-item {
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    background: #d6e5e2;
+}
+
+.portfolio-image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    padding-top: 25px;
+}
+
+ul.employee-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.employee-details {
+    background: rgba(50, 50, 50, 0.9);
+    color: #11dd32;
+    padding: 15px;
+}
+
+li.link-items a {
+    font-size: 24px;
+    background: #11dd32;
+    color: #fff;
+    padding: 5px;
+    border-radius: 24px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out, color 0.25s ease-in-out;
+}
+
+li.link-items a:hover {
+    background: #11aa32;
+}
+
+.employee-details {
+    background: rgba(50, 50, 50, 0.9);
+    color: #11dd32;
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    transform: translateY(140px);
+    transition: all 300ms linear;
+}
+
+/* .portfolio-item:hover .employee-details{
+    bottom: 0;
+} */
+
+.portfolio-item:hover .employee-details {
+    transform: translateY(0);
+}

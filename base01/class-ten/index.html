@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10: Debugging JavaScript and basic browser DevTools</title>
+</head>
+<body>
+    <h1 class="one two theree" onmouseenter="changeColor(event)" onclick="clickEvent(event)"><span>10:</span> Debugging JavaScript and basic browser DevTools</h1>
+
+    <script>
+        function changeColor(event){
+            console.log(event);
+            const h1 = document.querySelector('h1');
+            h1.style.color = '#ff00ff';
+
+
+
+        }
+
+        function clickEvent(event){
+            console.log(event);
+            console.log(event.target.classList.value['one'])
+            const h1 = document.querySelector('h1');
+            h1.style.color = '#ff00ff'
+        }
+    </script>
+</body>
+</html>

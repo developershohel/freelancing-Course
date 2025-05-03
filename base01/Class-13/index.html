@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Class 13: JavaScript ES6+: Arrow functions, template literals,
+            destructuring.
+        </title>
+    </head>
+    <body>
+        <h1>
+            Class 13: JavaScript ES6+: Arrow functions, template literals,
+            destructuring.
+        </h1>
+        <script>
+            const q1 = ["Jan", "Feb", "Mar"];
+            const q2 = ["Apr", "May", "Jun"];
+            const q3 = ["Jul", "Aug", "Sep"];
+            const q4 = ["Oct", "Nov", "Des", "kis", "add", "kori"];
+
+            const year = [...q1, ...q2, ...q3, ...q4];
+            console.log(year);
+            const cars = ["BMW", "Volvo", "Mini"];
+
+            for (let x of cars) {
+                console.log(x);
+            }
+
+            let language = "JavaScript";
+            let text = "";
+
+            for (let x of language) {
+                text += x + "\t";
+            }
+            console.log(text);
+            
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyeColor: "blue",
+            };
+            let { firstName, lastName } = person;
+            console.log(`${firstName} kisu liktha pari ${lastName}`);
+
+            const testArrowFunc = (a, b) => {
+                console.log(a, b);
+            };
+
+            const testFunc = function (b, c) {
+                console.log("test function");
+            };
+            testFunc("ja kono value");
+        </script>
+    </body>
+</html>

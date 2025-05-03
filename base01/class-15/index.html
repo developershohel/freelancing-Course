@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Class 15: Fetch API and working with external APIs.</title>
+        <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <h1>Class 15: Fetch API and working with external APIs.</h1>
+        <div
+            id="products"
+            style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 35px;
+            "
+        ></div>
+        <script>
+            const url = "https://fakestoreapi.com/products/";
+            async function ajaxFunc() {
+                await $.ajax({
+                    url: url,
+                    method: "GET",
+                    beforeSend: () => {
+                        $("body").css("background-color", "#ff0000");
+                    },
+                    success: async (response) => {
+                        const res = await response;
+                        res.forEach((element) => {
+                            $("#products").append(`<div style="width: 300px; border: 1px solid #ddd; border-radius: 8px; padding: 16px; font-family: Arial, sans-serif; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"><img src="${element.image}" alt="${element.title}" style="width: 100%; height: auto; border-radius: 6px;"><h2 style="font-size: 18px; margin: 12px 0 6px;">${element.title}</h2><p style="color: #888; font-size: 14px; margin: 0 0 10px;">Category: ${element.category}/p><p style="font-size: 14px; color: #555; line-height: 1.4;">${element.description}}</p><p style="font-size: 16px; font-weight: bold; margin: 10px 0;">${element.price}</p><p style="font-size: 14px; color: #555;">Rating: ⭐ ${element.rating.rate} (${element.rating.count} reviews)</p><button style="margin-top: 10px; background-color: #007bff; color: white; border: none; padding: 10px 16px; border-radius: 4px; cursor: pointer;">Add to Cart</button></div>`);
+                        });
+                    },
+                    complete: function (xhr, status) {
+                        console.log(xhr);
+                        console.log(status);
+                        $("body").css("background-color", "#00ff00");
+                    },
+                    error: (xhr, status, errors) => {
+                        console.log(xhr);
+                        console.log(status);
+                        console.log(errors);
+                    },
+                });
+            }
+            ajaxFunc();
+            async function getData() {
+                try {
+                    const response = await fetch(url, {
+                        method: "GET",
+                    });
+                    console.log(response);
+                    if (!response.ok) {
+                        throw new Error(`Response status: ${response.status}`);
+                    }
+                    const json = await response.json();
+                    json.forEach((element) => {
+                        $("#products")
+                            .append(`<div style="width: 300px; border: 1px solid #ddd; border-radius: 8px; padding: 16px; font-family: Arial, sans-serif; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <img src="${element.image}" alt="${element.title}" style="width: 100%; height: auto; border-radius: 6px;">
+  <h2 style="font-size: 18px; margin: 12px 0 6px;">${element.title}</h2>
+  <p style="color: #888; font-size: 14px; margin: 0 0 10px;">Category: ${element.category}/p>
+  <p style="font-size: 14px; color: #555; line-height: 1.4;">${element.description}}</p>
+  <p style="font-size: 16px; font-weight: bold; margin: 10px 0;">${element.price}</p>
+  <p style="font-size: 14px; color: #555;">Rating: ⭐ ${element.rating.rate} (${element.rating.count} reviews)</p>
+  <button style="margin-top: 10px; background-color: #007bff; color: white; border: none; padding: 10px 16px; border-radius: 4px; cursor: pointer;">
+    Add to Cart
+  </button>
+</div>
+`);
+                    });
+                } catch (error) {
+                    console.error(error.message);
+                }
+            }
+            getData();
+        </script>
+    </body>
+</html>
